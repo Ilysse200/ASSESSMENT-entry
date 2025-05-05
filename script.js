@@ -13,22 +13,32 @@ function validateForm() {
     const email = document.getElementById("contactEmail").value.trim();
     let valid = true;
   
-    document.getElementById("nameError").innerText = "";
-    document.getElementById("emailError").innerText = "";
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const successMessage = document.getElementById("successMessage");
+  
+    nameError.innerText = "";
+    emailError.innerText = "";
+    successMessage.style.display = "none";
   
     if (name === "") {
-      document.getElementById("nameError").innerText = "Name is required.";
+      nameError.innerText = "Name is required.";
       valid = false;
     }
   
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      document.getElementById("emailError").innerText = "Invalid email format.";
+      emailError.innerText = "Invalid email format.";
       valid = false;
     }
   
-    return valid;
+    if (valid) {
+      successMessage.style.display = "block";
+    }
+  
+    return false; // prevent form from submitting for demo purposes
   }
+  
   
   //This function handles the greetings display when a button is clicked
   function toggleGreeting() {
