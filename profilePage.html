@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+    <!--This is the header or the beginning of the page-->
+    <header>
+    <h1>Wanda Guela Ruzindana</h1>
+  </header>
+
+  <main>
+    <!--This area is for the short bio that provides information about me-->
+    <section class="bio">
+      <img src="profile.jpeg" alt="Profile Photo" id="profile-img">
+      <div class="formGroup">
+      <p>
+        Hello! I'm Wanda Guela RUZINDANA, a student and software engineer passionate about building impactful digital solutions.  
+        I enjoy combining technical skills with creativity to solve real-world problems and continuously grow in the field of technology.
+      </p>
+      </div>
+    </section>
+
+    
+    <!--This is the hobbies listings-->
+    <section class="hobbies">
+        <div class="form-view">
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Reading thought-provoking books</li>
+        <li>Watching anime & historical dramas</li>
+        <li>Playing violin and other musical instruments</li>
+      </ul>
+      </div>
+    </section>
+
+    <!-- This button when clicked greets the user-->
+    <section class="interactive">
+      <button id="hoverButton" onclick="toggleGreeting()">Hover Over Me</button>
+      <div id="greetingMessage" class="greeting" style="display: none;"></div>
+    </section>
+
+    
+    <!--This is the contact section or the form -->
+    <section class="contact">
+        <div class="formBox">
+      <h2>Contact Me</h2>
+      <form onsubmit="return validateForm()" >
+        <label for="contactName">Name:</label>
+        <input type="text" id="contactName" />
+        <div class="error" id="nameError"></div>
+
+        <label for="contactEmail">Email:</label>
+        <input type="text" id="contactEmail" />
+        <div class="error" id="emailError"></div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    </section>
+  </main>
+  <!--This is the footer area-->
+  <footer>
+    <p>&copy; 2025 Guela Ruzindana. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
